@@ -22,6 +22,11 @@ for weights in zip(*weights_list):
     weighted = sum(w * s for w, s in zip(weights, data_sizes))
     fedweighted_weights.append(weighted / total_size)
 
+
+np.savez("fedavg_weights.npz", *fedavg_weights)
+np.savez("fedmedian_weights.npz", *fedmedian_weights)
+np.savez("fedweighted_weights.npz", *fedweighted_weights)
+
 (_, _), (x_test, y_test) = tf.keras.datasets.mnist.load_data()
 x_test = np.expand_dims(x_test / 255.0, -1)
 
