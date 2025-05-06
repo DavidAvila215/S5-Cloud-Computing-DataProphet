@@ -24,5 +24,6 @@ La estructura de este repositorio se divide en tres partes principales:
 - global_model.py se encarga de agregar los modelos entrenados por cada miembro en un modelo global, utilizando estrategias como FedAvg, FedMedian y FedWeightedAvg.
 
 Como parte del aprendizaje federado, cada miembro entrena con sus propio parte del dataset, siendo datos privados. Por esta razón, los archivos con los datos divididos (como split_data.py que se usó para la división del dataset y los archivos .npz) no están incluidos en este repositorio, ya que se consideran confidenciales.
+- global_model_censurado.py es la version del codigo global_model que muestra los resultados del entrenamiento pero sin necesidad de mostrar los datos privados en el repositorio..
 
-Tampoco se incluyen los pesos entrenados (.h5) ni los modelos globales resultantes (.keras), ya que fueron generados con datos privados. El repositorio solo contiene el código necesario para replicar el proceso, en el orden mencionado.
+
